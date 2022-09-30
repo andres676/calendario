@@ -5,14 +5,13 @@ const checkComplete = (id) => {
     return i;
 };
 
-// immediately invoked function expression IIFE
 const completeTask = (e, id) => {
     const element = e.target
     element.classList.toggle("fas");
     element.classList.toggle("completeIcon");
     element.classList.toggle("far");
     const tasks = JSON.parse(localStorage.getItem("tasks"));
-    const index = tasks.findIndex(item => item.id === id);
+    const index = tasks.findIndex((item) => item.id === id);
     tasks[index]["complete"] = !tasks[index]["complete"];
     localStorage.setItem("tasks", JSON.stringify(tasks));
 };

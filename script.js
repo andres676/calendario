@@ -1,5 +1,5 @@
-import { addTask } from "./components/addTask";
-import { displayTasks } from "./components/readTasks";
+import { addTask } from "./components/addTask.js";
+import { displayTasks } from "./components/readTasks.js";
 
 const btn = document.querySelector("[data-form-btn]");
  
